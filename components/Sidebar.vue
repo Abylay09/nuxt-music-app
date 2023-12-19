@@ -56,6 +56,7 @@ ul {
     li {
         margin-bottom: 24px;
         a {
+            cursor: pointer;
             font-size: 21px;
             font-weight: 500;
             color: #fff;

@@ -41,11 +41,18 @@ definePageMeta({
             <input v-model="state.email" type="text" placeholder="email">
             <input v-model="state.password" type="text" placeholder="password">
             <button>Sign up</button>
+            <button>
+                <NuxtLink to="/signin">Sign in</NuxtLink>
+            </button>
         </form>
     </div>
 </template>
 
 <style lang="scss" scoped>    
+a {
+    text-decoration: none;
+    color: #fff;
+}
     .auth-page{
         display: flex;
         align-items: center;
