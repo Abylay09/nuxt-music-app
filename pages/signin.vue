@@ -60,25 +60,14 @@ definePageMeta({
         width: 100%;
         gap: 24px;
         input{
-            padding: 12px 4px;
+            padding: 12px 8px;
             font-size: 21px;
             border-radius: 12px;
+            border: none;
             &::placeholder{
                 font-size: 21px;
             }
         }
-        button{
-            padding: 12px;
-            font-size: 24px;
-            font-weight: 500;
-            background: transparent;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s linear;
-            &:hover{
-                background-color: $main-color;
-                color: #fff;
-            }
-        }
+        
     }
 </style>

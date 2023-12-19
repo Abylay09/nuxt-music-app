@@ -10,6 +10,7 @@ const config = useRuntimeConfig();
       v-for="(artist, index) in artists"
       :key="index + 1"
       class="artist-item">
+      <NuxtLink :to="`/artists/${artist.id}`" class="full" />
       <div class="artist-item__image">
         <img
           :src="`${config.public.apiBase}/public/artist/images/${artist.image}`"
@@ -25,10 +26,20 @@ const config = useRuntimeConfig();
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  padding: 14px 0;
 }
 .artist-item {
+  position: relative;
+  text-align: center;
+  transition: 0.2s ease;
+  &:hover {
+    transform: scale(1.2);
+    color: #1DB954;
+  }
+  &__title {
+    margin-top: 12px;
+  }
   &__image {
+    margin: auto;
     border-radius: 100%;
     border: 1.5px solid grey;
     overflow: hidden;

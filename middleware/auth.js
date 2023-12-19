@@ -7,6 +7,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     else if(to.path == '/artist' && !token.value){
         return navigateTo('/signin')
     }
+    console.log(token, 'er')
     // if(token.value.length){
     //     return navigateTo(to.fullPath)
     // }else{

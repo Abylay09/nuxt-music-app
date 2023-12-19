@@ -1,15 +1,15 @@
 <script setup>
 import ArtistList from '~/components/artist/ArtistList.vue';
-import MusicList from '~/components/music/MusicList.vue';
 definePageMeta({
     middleware: 'auth'
 })
 const config = useRuntimeConfig()
 const {data, pending} = useAsyncData(async () => {
-    const responseTracks = await fetch(`${config.public.apiBase}/music/get-all-tracks`)
-    const tracks = await responseTracks.json()
+    const response = await fetch(`${config.public.apiBase}/artist/all`)
+    const artists = await response.json()
     return {
-        tracks
+        artists,
+        
     }
 }, {
     server: false
@@ -19,8 +19,8 @@ const {data, pending} = useAsyncData(async () => {
     <div>
         <div class="container">
             <div v-if="!pending">
-                <div class="title">Tracks</div>
-                <MusicList :tracks="data.tracks"/>
+                <div class="title">Artists</div>
+                <ArtistList :artists="data.artists"/>
             </div>
             <div v-else>Loading</div>
         </div>

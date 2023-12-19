@@ -1,27 +1,25 @@
 <script setup>
-import Footer from '~/components/Footer.vue';
-import Header from '~/components/Header.vue';
+import Sidebar from '~/components/Sidebar.vue'
 
 </script>
 
 <template>
     <div class="layout">
-        <Header/>
+        <Sidebar />
         <main>
             <slot/>
         </main>
-        <Footer/>
     </div>
 </template>
 
 <style lang="scss" scoped>
     .layout{
-        padding: 0 32px;
+        padding: 0 32px 0 0;
         display: flex;
-        flex-direction: column;
         height: 100vh;
         main{
             flex: 1;
+            padding: 30px;
         }
     }
 </style>

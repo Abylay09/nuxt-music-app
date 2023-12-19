@@ -45,7 +45,7 @@ definePageMeta({
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped>    
     .auth-page{
         display: flex;
         align-items: center;
@@ -62,9 +62,10 @@ definePageMeta({
         width: 100%;
         gap: 24px;
         input{
-            padding: 12px 4px;
+            padding: 12px 8px;
             font-size: 21px;
             border-radius: 12px;
+            border: none;
             &::placeholder{
                 font-size: 21px;
             }
@@ -77,9 +78,10 @@ definePageMeta({
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s linear;
+            color: #fff;
             &:hover{
                 background-color: $main-color;
-                color: #fff;
+                color: #1DB954;
             }
         }
     }
