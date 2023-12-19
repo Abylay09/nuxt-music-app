@@ -32,6 +32,9 @@ const logout = () => {
                     <nuxt-link to="/search">Search</nuxt-link>
                 </li>
                 <li>
+                    <nuxt-link to="/create-artist">Add artist</nuxt-link>
+                </li>
+                <li>
                     <nuxt-link v-if="isLoggedIn" @click="logout">Log out</nuxt-link>
                 </li>
             </ul>
