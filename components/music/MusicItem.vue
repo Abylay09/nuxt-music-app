@@ -6,7 +6,6 @@ const props = defineProps({
 
 const trackName = computed(() => {
     const lastDotIndex = props.track.name.lastIndexOf('.');
-  // Если точка найдена и она не является первым символом, обрезаем строку до этой точки
     if (lastDotIndex !== -1 && lastDotIndex !== 0) {
         return props.track.name.slice(0, lastDotIndex);
     }
@@ -29,7 +28,11 @@ const trackName = computed(() => {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px;
+    h4{
+      font-size: 24px;
+      font-weight: 400;
+    }
     audio{
         width: 100%;
     }

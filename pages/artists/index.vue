@@ -26,3 +26,9 @@ const {data, pending} = useAsyncData(async () => {
         </div>
     </div>
 </template>
+
+<style lang="scss" scoped>
+    .title{
+        font-size: 42px;
+    }
+</style>

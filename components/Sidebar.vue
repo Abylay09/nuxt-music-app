@@ -29,6 +29,9 @@ const logout = () => {
                     <nuxt-link to="/add-track">Add track</nuxt-link>
                 </li>
                 <li>
+                    <nuxt-link to="/search">Search</nuxt-link>
+                </li>
+                <li>
                     <nuxt-link v-if="isLoggedIn" @click="logout">Log out</nuxt-link>
                 </li>
             </ul>
@@ -53,7 +56,7 @@ ul {
     li {
         margin-bottom: 24px;
         a {
-            font-size: 16px;
+            font-size: 21px;
             font-weight: 500;
             color: #fff;
             text-decoration: none;

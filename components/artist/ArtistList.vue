@@ -37,14 +37,15 @@ const config = useRuntimeConfig();
   }
   &__title {
     margin-top: 12px;
+    font-size: 24px;
   }
   &__image {
     margin: auto;
     border-radius: 100%;
     border: 1.5px solid grey;
     overflow: hidden;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     img {
       object-fit: cover;
       width: 100%;
